@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-
-!pip install xgboost
-
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -27,5 +23,3 @@ dataTest = pd.read_csv(testFile)
 X = dataTest.drop(['meal','id', 'DateTime'], axis=1)
 
 pred = modelFit.predict(X).tolist()
-
-print(pred)
